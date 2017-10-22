@@ -18,7 +18,7 @@ namespace AnyPay
         private TextView CardShortName;
         private TextView CardHolderName;
         private TextView CardAccountNumber;
-        private BitmapCache bitmapCache;
+        protected BitmapCache bitmapCache;
 
         public PaymentMethodRow(Context context, BitmapCache bitmapCache) : base(context)
         {

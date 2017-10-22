@@ -13,12 +13,22 @@
         android:layout_height="wrap_content"
         custom:showBack="true"
         custom:showMenu="false" />
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+    </RelativeLayout>
     <TextView
         android:text="Pay Now"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1"
+        android:id="@+id/TitleText"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="4dp"
         android:textSize="40dp"
@@ -30,11 +40,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <TextView
-        android:text="Touch the AnyPay dongle to the card reader."
+        android:text="Touch the AnyPay dongle to the card reader. This payment will expire in 30 seconds."
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2"
+        android:id="@+id/FlavorText"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:textSize="16dp"
