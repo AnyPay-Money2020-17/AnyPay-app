@@ -31,6 +31,12 @@ namespace AnyPay
 		public partial class Attribute
 		{
 			
+			// aapt resource value: 0x7f010000
+			public const int showBack = 2130771968;
+			
+			// aapt resource value: 0x7f010001
+			public const int showMenu = 2130771969;
+			
 			static Attribute()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -60,10 +66,22 @@ namespace AnyPay
 			public const int anypay_wordmark = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int CardClip = 2130837509;
+			public const int BackButton = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int Rect = 2130837510;
+			public const int CardClip = 2130837510;
+			
+			// aapt resource value: 0x7f020007
+			public const int ic_arrow_back_black_48dp = 2130837511;
+			
+			// aapt resource value: 0x7f020008
+			public const int ic_menu_black_48dp = 2130837512;
+			
+			// aapt resource value: 0x7f020009
+			public const int MenuButton = 2130837513;
+			
+			// aapt resource value: 0x7f02000a
+			public const int Rect = 2130837514;
 			
 			static Drawable()
 			{
@@ -78,20 +96,29 @@ namespace AnyPay
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060002
-			public const int CardContainer = 2131099650;
+			// aapt resource value: 0x7f060005
+			public const int CardContainer = 2131099653;
 			
-			// aapt resource value: 0x7f060003
-			public const int CardImage = 2131099651;
+			// aapt resource value: 0x7f060006
+			public const int CardImage = 2131099654;
 			
-			// aapt resource value: 0x7f060004
-			public const int CardShortName = 2131099652;
-			
-			// aapt resource value: 0x7f060001
-			public const int PMList = 2131099649;
+			// aapt resource value: 0x7f060007
+			public const int CardShortName = 2131099655;
 			
 			// aapt resource value: 0x7f060000
-			public const int imageView1 = 2131099648;
+			public const int MenuBar = 2131099648;
+			
+			// aapt resource value: 0x7f060001
+			public const int MenuButtonBack = 2131099649;
+			
+			// aapt resource value: 0x7f060003
+			public const int MenuButtonMenu = 2131099651;
+			
+			// aapt resource value: 0x7f060004
+			public const int PMList = 2131099652;
+			
+			// aapt resource value: 0x7f060002
+			public const int imageView1 = 2131099650;
 			
 			static Id()
 			{
@@ -171,6 +198,29 @@ namespace AnyPay
 			}
 			
 			private Style()
+			{
+			}
+		}
+		
+		public partial class Styleable
+		{
+			
+			public static int[] MenuBar = new int[] {
+					2130771968,
+					2130771969};
+			
+			// aapt resource value: 0
+			public const int MenuBar_showBack = 0;
+			
+			// aapt resource value: 1
+			public const int MenuBar_showMenu = 1;
+			
+			static Styleable()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Styleable()
 			{
 			}
 		}

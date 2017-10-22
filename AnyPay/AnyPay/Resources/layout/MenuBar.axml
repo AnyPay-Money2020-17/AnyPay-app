@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="60dp"
     android:minWidth="25px"
@@ -8,16 +8,36 @@
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
     android:paddingBottom="2dp"
+    android:paddingTop="2dp"
     android:gravity="bottom"
     android:background="@drawable/rect"
-    android:elevation="5dp">
+    android:elevation="5dp"
+    android:clipChildren="true">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/MenuButtonBack"
+        android:layout_gravity="center_vertical"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:background="@drawable/backbutton"
+        android:layout_margin="3dp" />
     <ImageView
         android:src="@drawable/anypay_wordmark"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:id="@+id/imageView1"
         android:layout_gravity="center"
-        android:scaleType="fitStart"
-        android:layout_weight="1"
-        android:adjustViewBounds="true" />
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:layout_weight="1" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/MenuButtonMenu"
+        android:layout_gravity="center_vertical"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:background="@drawable/menubutton"
+        android:layout_margin="3dp" />
 </LinearLayout>

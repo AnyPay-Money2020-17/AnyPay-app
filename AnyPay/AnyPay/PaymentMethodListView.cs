@@ -15,9 +15,13 @@ namespace AnyPay
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.PaymentMethodList);
 
+            MenuBar menuBar = FindViewById<MenuBar>(Resource.Id.MenuBar);
+            menuBar.MenuHandler += delegate
+            {
+                StartActivity(typeof(AccountView));
+            };
+
             ListView PMListView = FindViewById<ListView>(Resource.Id.PMList);
-            //LinearLayout menuBar = new LinearLayout(this);
-            //PMListView.AddHeaderView(LayoutInflater.Inflate(Resource.Layout.MenuBar, menuBar), null, false);
             PMListAdapter = new PaymentMethodListAdapter(this, new PaymentMethodList());
             PMListView.Adapter = PMListAdapter;
             PMListAdapter.NotifyDataSetChanged();
