@@ -28,7 +28,6 @@ namespace AnyPay
             {
                 result = BitmapFactory.DecodeResource(context.Resources, resourceID, bitmapOptions);
                 bitmapCache.Add(resourceID, result);
-                Log.Info("anypay-bitmapCache", "Added new bitmap");
             }
             return result;
         }

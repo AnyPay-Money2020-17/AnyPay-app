@@ -87,10 +87,16 @@ namespace AnyPay
 			public const int ic_menu_black_48dp = 2130837515;
 			
 			// aapt resource value: 0x7f02000c
-			public const int MenuButton = 2130837516;
+			public const int mastercard_base_xxhdpi = 2130837516;
 			
 			// aapt resource value: 0x7f02000d
-			public const int Rect = 2130837517;
+			public const int MenuButton = 2130837517;
+			
+			// aapt resource value: 0x7f02000e
+			public const int Rect = 2130837518;
+			
+			// aapt resource value: 0x7f02000f
+			public const int visa_base_xxhdpi = 2130837519;
 			
 			static Drawable()
 			{

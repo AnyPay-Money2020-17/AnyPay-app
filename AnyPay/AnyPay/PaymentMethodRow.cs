@@ -2,6 +2,7 @@ using System.Collections.Generic;
 
 using Android.Content;
 using Android.Widget;
+using Android.Graphics;
 
 namespace AnyPay
 {
@@ -39,23 +40,48 @@ namespace AnyPay
             CardShortName.Text = data.ShortName;
             CardHolderName.Text = data.AccountHolder;
             CardAccountNumber.Text = data.ObfuscatedAccountNumber;
-            int imageResource = GetCardImageResourceByName(data.PaymentMethodType);
-            CardImage.SetImageBitmap(bitmapCache.GetBitmap(imageResource));
+            CardGraphicDefinition imageResource = GetCardGraphicsByName(data.PaymentMethodType);
+            CardImage.SetImageBitmap(bitmapCache.GetBitmap(imageResource.GraphicResource));
+            Color textColor = Color.ParseColor(imageResource.TextColor);
+            CardShortName.SetTextColor(textColor);
+            CardHolderName.SetTextColor(textColor);
+            CardAccountNumber.SetTextColor(textColor);
         }
 
-
-        private static IDictionary<string, int> cardImages = new Dictionary<string, int> {
-            {"visa", Resource.Drawable.acf_nc_blue_xxhdpi} //you get the idea
-        };
-        private static int[] defaultCardImages = new int[]
+        private class CardGraphicDefinition
         {
-            Resource.Drawable.acf_ncc_red_xxhdpi,
-            Resource.Drawable.acf_ncc_green_xxhdpi,
-            Resource.Drawable.acf_ncc_blue_xxhdpi
+            public int GraphicResource;
+            public string TextColor;
+            /* could also hold position of texts etc */
+        }
+        private static IDictionary<string, CardGraphicDefinition> cardImages = new Dictionary<string, CardGraphicDefinition> {
+            {"visa", new CardGraphicDefinition {
+                GraphicResource = Resource.Drawable.visa_base_xxhdpi,
+                TextColor = "#ff222222"
+            }},
+            {"mastercard", new CardGraphicDefinition {
+                GraphicResource = Resource.Drawable.mastercard_base_xxhdpi,
+                TextColor = "#ffeeeeee"
+            }}
         };
-        protected int GetCardImageResourceByName(string name)
+        private static CardGraphicDefinition[] defaultCardImages = new CardGraphicDefinition[]
         {
-            int resource = 0;
+            new CardGraphicDefinition {
+                GraphicResource = Resource.Drawable.acf_ncc_red_xxhdpi,
+                TextColor = "#ff000000"
+            },
+            new CardGraphicDefinition {
+                GraphicResource = Resource.Drawable.acf_ncc_green_xxhdpi,
+                TextColor = "#ff000000"
+            },
+            new CardGraphicDefinition {
+                GraphicResource = Resource.Drawable.acf_ncc_blue_xxhdpi,
+                TextColor = "#ff000000"
+            }
+        };
+        private CardGraphicDefinition GetCardGraphicsByName(string name)
+        {
+            CardGraphicDefinition resource;
             if (!cardImages.TryGetValue(name, out resource))
             {
                 int idx_max = defaultCardImages.Length - 1;
