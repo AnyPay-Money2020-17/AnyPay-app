@@ -66,6 +66,7 @@
     <Compile Include="BitmapCache.cs" />
     <Compile Include="CreateAccount.cs" />
     <Compile Include="LoginAccount.cs" />
+    <Compile Include="MenuBar.cs" />
     <Compile Include="Pay.cs" />
     <Compile Include="PaymentMethodList.cs" />
     <Compile Include="PaymentMethodListView.cs" />
@@ -104,6 +105,9 @@
     <AndroidResource Include="Resources\layout\PaymentMethodRow.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\MenuBar.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\style.xml">
@@ -129,6 +133,12 @@
     <AndroidResource Include="Resources\drawable\CardClip.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\anypay_wordmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Rect.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

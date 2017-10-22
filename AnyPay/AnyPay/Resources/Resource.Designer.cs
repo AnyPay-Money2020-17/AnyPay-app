@@ -57,7 +57,13 @@ namespace AnyPay
 			public const int anypay_icon_a_256 = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int CardClip = 2130837508;
+			public const int anypay_wordmark = 2130837508;
+			
+			// aapt resource value: 0x7f020005
+			public const int CardClip = 2130837509;
+			
+			// aapt resource value: 0x7f020006
+			public const int Rect = 2130837510;
 			
 			static Drawable()
 			{
@@ -72,17 +78,20 @@ namespace AnyPay
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060001
-			public const int CardContainer = 2131099649;
-			
 			// aapt resource value: 0x7f060002
-			public const int CardImage = 2131099650;
+			public const int CardContainer = 2131099650;
 			
 			// aapt resource value: 0x7f060003
-			public const int CardShortName = 2131099651;
+			public const int CardImage = 2131099651;
+			
+			// aapt resource value: 0x7f060004
+			public const int CardShortName = 2131099652;
+			
+			// aapt resource value: 0x7f060001
+			public const int PMList = 2131099649;
 			
 			// aapt resource value: 0x7f060000
-			public const int PMList = 2131099648;
+			public const int imageView1 = 2131099648;
 			
 			static Id()
 			{
@@ -110,13 +119,16 @@ namespace AnyPay
 			public const int LoginAccount = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int Pay = 2130903044;
+			public const int MenuBar = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int PaymentMethodList = 2130903045;
+			public const int Pay = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int PaymentMethodRow = 2130903046;
+			public const int PaymentMethodList = 2130903046;
+			
+			// aapt resource value: 0x7f030007
+			public const int PaymentMethodRow = 2130903047;
 			
 			static Layout()
 			{
