@@ -9,11 +9,15 @@ namespace AnyPay
 
         public string ShortName { get; private set; }
         public string PaymentMethodType { get; private set; }
+        public string ObfuscatedAccountNumber { get; private set; }
+        public string AccountHolder { get; private set; }
 
-        public PaymentMethod(string sn, string pmt)
+        public PaymentMethod(string sn, string pmt, string oan, string ah)
         {
             ShortName = sn;
             PaymentMethodType = pmt;
+            ObfuscatedAccountNumber = oan;
+            AccountHolder = ah;
         }
     }
 }

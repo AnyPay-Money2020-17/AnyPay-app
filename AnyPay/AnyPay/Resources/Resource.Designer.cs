@@ -60,28 +60,37 @@ namespace AnyPay
 			public const int acf_nc_red_xxhdpi = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int anypay_icon_a_256 = 2130837507;
+			public const int acf_ncc_blue_xxhdpi = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int anypay_wordmark = 2130837508;
+			public const int acf_ncc_green_xxhdpi = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int BackButton = 2130837509;
+			public const int acf_ncc_red_xxhdpi = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int CardClip = 2130837510;
+			public const int anypay_icon_a_256 = 2130837510;
 			
 			// aapt resource value: 0x7f020007
-			public const int ic_arrow_back_black_48dp = 2130837511;
+			public const int anypay_wordmark = 2130837511;
 			
 			// aapt resource value: 0x7f020008
-			public const int ic_menu_black_48dp = 2130837512;
+			public const int BackButton = 2130837512;
 			
 			// aapt resource value: 0x7f020009
-			public const int MenuButton = 2130837513;
+			public const int CardClip = 2130837513;
 			
 			// aapt resource value: 0x7f02000a
-			public const int Rect = 2130837514;
+			public const int ic_arrow_back_black_48dp = 2130837514;
+			
+			// aapt resource value: 0x7f02000b
+			public const int ic_menu_black_48dp = 2130837515;
+			
+			// aapt resource value: 0x7f02000c
+			public const int MenuButton = 2130837516;
+			
+			// aapt resource value: 0x7f02000d
+			public const int Rect = 2130837517;
 			
 			static Drawable()
 			{
@@ -96,14 +105,23 @@ namespace AnyPay
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f06000a
+			public const int CardAccountNumber = 2131099658;
+			
 			// aapt resource value: 0x7f060005
 			public const int CardContainer = 2131099653;
+			
+			// aapt resource value: 0x7f06000b
+			public const int CardHolderName = 2131099659;
 			
 			// aapt resource value: 0x7f060006
 			public const int CardImage = 2131099654;
 			
-			// aapt resource value: 0x7f060007
-			public const int CardShortName = 2131099655;
+			// aapt resource value: 0x7f060008
+			public const int CardShortName = 2131099656;
+			
+			// aapt resource value: 0x7f060009
+			public const int LowerCardFields = 2131099657;
 			
 			// aapt resource value: 0x7f060000
 			public const int MenuBar = 2131099648;
@@ -116,6 +134,9 @@ namespace AnyPay
 			
 			// aapt resource value: 0x7f060004
 			public const int PMList = 2131099652;
+			
+			// aapt resource value: 0x7f060007
+			public const int UpperCardFields = 2131099655;
 			
 			// aapt resource value: 0x7f060002
 			public const int imageView1 = 2131099650;

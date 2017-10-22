@@ -13,11 +13,9 @@ namespace AnyPay
 
         public PaymentMethodList()
         {
-            PaymentMethods.Add(new PaymentMethod("Good", "mastercard"));
-            PaymentMethods.Add(new PaymentMethod("Cool", "visa"));
-            PaymentMethods.Add(new PaymentMethod("Neat", "paypal"));
-            PaymentMethods.Add(new PaymentMethod("Fun", "visa_target"));
-            PaymentMethods.Add(new PaymentMethod("Sweet", "gc_target"));
+            PaymentMethods.Add(new PaymentMethod("Good", "visa", "XXXX-XXXX-XXXX-9990", "Samp L. Text"));
+            PaymentMethods.Add(new PaymentMethod("Cool", "mastercard", "XXXX-XXXX-XXXX-1234", "First N. Last"));
+            PaymentMethods.Add(new PaymentMethod("Sweet", "paypal", "pixelfelon@gmail.com", "James Rowley"));
         }
     }
 }

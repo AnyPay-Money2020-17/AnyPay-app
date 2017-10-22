@@ -11,6 +11,8 @@ namespace AnyPay
         private RelativeLayout CardContainer;
         private ImageView CardImage;
         private TextView CardShortName;
+        private TextView CardHolderName;
+        private TextView CardAccountNumber;
         private BitmapCache bitmapCache;
 
         public PaymentMethodRow(Context context, BitmapCache bitmapCache) : base(context)
@@ -27,25 +29,29 @@ namespace AnyPay
             CardContainer = FindViewById<RelativeLayout>(Resource.Id.CardContainer);
             CardImage = FindViewById<ImageView>(Resource.Id.CardImage);
             CardShortName = FindViewById<TextView>(Resource.Id.CardShortName);
+            CardHolderName = FindViewById<TextView>(Resource.Id.CardHolderName);
+            CardAccountNumber = FindViewById<TextView>(Resource.Id.CardAccountNumber);
             CardContainer.ClipToOutline = true;
         }
 
         public void UpdateViewData(PaymentMethod data)
         {
             CardShortName.Text = data.ShortName;
+            CardHolderName.Text = data.AccountHolder;
+            CardAccountNumber.Text = data.ObfuscatedAccountNumber;
             int imageResource = GetCardImageResourceByName(data.PaymentMethodType);
             CardImage.SetImageBitmap(bitmapCache.GetBitmap(imageResource));
         }
 
 
         private static IDictionary<string, int> cardImages = new Dictionary<string, int> {
-            {"mastercard", Resource.Drawable.acf_nc_red_xxhdpi} //you get the idea
+            {"visa", Resource.Drawable.acf_nc_blue_xxhdpi} //you get the idea
         };
         private static int[] defaultCardImages = new int[]
         {
-            Resource.Drawable.acf_nc_red_xxhdpi,
-            Resource.Drawable.acf_nc_green_xxhdpi,
-            Resource.Drawable.acf_nc_blue_xxhdpi
+            Resource.Drawable.acf_ncc_red_xxhdpi,
+            Resource.Drawable.acf_ncc_green_xxhdpi,
+            Resource.Drawable.acf_ncc_blue_xxhdpi
         };
         protected int GetCardImageResourceByName(string name)
         {

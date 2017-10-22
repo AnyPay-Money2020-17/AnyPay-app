@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:clipToPadding="false"
     android:elevation="0dp"
@@ -23,12 +23,44 @@
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
             android:id="@+id/CardImage" />
-        <TextView
+        <LinearLayout
+            android:id="@+id/UpperCardFields"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/CardShortName"
-            android:layout_centerVertical="true"
-            android:textSize="20dp"
-            android:gravity="center" />
+            android:layout_alignTop="@id/CardImage">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/CardShortName"
+                android:textSize="20dp"
+                android:gravity="right"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="21dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/LowerCardFields"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/CardImage">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/CardAccountNumber"
+                android:textSize="22dp"
+                android:gravity="left"
+                android:layout_marginBottom="17dp"
+                android:layout_marginLeft="30dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/CardHolderName"
+                android:textSize="18dp"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="36dp" />
+        </LinearLayout>
     </RelativeLayout>
 </LinearLayout>
