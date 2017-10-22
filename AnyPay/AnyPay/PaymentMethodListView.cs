@@ -2,6 +2,8 @@
 using Android.Widget;
 using Android.OS;
 using Android.Views;
+using Android.Content;
+using static Android.Widget.AdapterView;
 
 namespace AnyPay
 {
@@ -15,15 +17,24 @@ namespace AnyPay
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.PaymentMethodList);
 
+            CurrentAccount.account = new Account();
+
             MenuBar menuBar = FindViewById<MenuBar>(Resource.Id.MenuBar);
             menuBar.MenuHandler += delegate
             {
                 StartActivity(typeof(AccountView));
             };
 
+            PaymentMethodList PMList = CurrentAccount.account.PaymentMethods;
             ListView PMListView = FindViewById<ListView>(Resource.Id.PMList);
-            PMListAdapter = new PaymentMethodListAdapter(this, new PaymentMethodList());
+            PMListAdapter = new PaymentMethodListAdapter(this, PMList);
             PMListView.Adapter = PMListAdapter;
+            PMListView.ItemClick += delegate (object sender, ItemClickEventArgs e)
+            {
+                Intent payNow = new Intent(this, typeof(Pay));
+                payNow.PutExtra("PM_UID", PMList.PaymentMethods[e.Position].UID);
+                StartActivity(payNow);
+            };
             PMListAdapter.NotifyDataSetChanged();
 
             /* TODO:

@@ -1,11 +1,15 @@
+using System;
 using System.Collections.Generic;
 
 using Android.Content;
+using Android.Runtime;
+using Android.Util;
 using Android.Widget;
 using Android.Graphics;
 
 namespace AnyPay
 {
+    [Register("org.AnyPay.app.AnyPay.AnyPay.PaymentMethodRow")]
     class PaymentMethodRow : LinearLayout
     {
         private Context context;
@@ -20,6 +24,39 @@ namespace AnyPay
         {
             this.context = context;
             this.bitmapCache = bitmapCache;
+            InitializeView();
+        }
+        
+        public PaymentMethodRow(Context context) :
+            base(context)
+        {
+            InitializeView();
+        }
+
+        public PaymentMethodRow(Context context, IAttributeSet attrs) :
+            base(context, attrs)
+        {
+            this.context = context;
+            InitializeView();
+        }
+
+        public PaymentMethodRow(Context context, IAttributeSet attrs, int defStyle) :
+            base(context, attrs, defStyle)
+        {
+            this.context = context;
+            InitializeView();
+        }
+
+        public PaymentMethodRow(Context context, IAttributeSet attrs, int defStyle, int defStyleRes) :
+            base(context, attrs, defStyle, defStyleRes)
+        {
+            this.context = context;
+            InitializeView();
+        }
+
+        public PaymentMethodRow(IntPtr handle, JniHandleOwnership owner) :
+            base(handle, owner)
+        {
             InitializeView();
         }
 
@@ -41,7 +78,10 @@ namespace AnyPay
             CardHolderName.Text = data.AccountHolder;
             CardAccountNumber.Text = data.ObfuscatedAccountNumber;
             CardGraphicDefinition imageResource = GetCardGraphicsByName(data.PaymentMethodType);
-            CardImage.SetImageBitmap(bitmapCache.GetBitmap(imageResource.GraphicResource));
+            if (bitmapCache != null)
+                CardImage.SetImageBitmap(bitmapCache.GetBitmap(imageResource.GraphicResource));
+            else
+                CardImage.SetImageResource(imageResource.GraphicResource);
             Color textColor = Color.ParseColor(imageResource.TextColor);
             CardShortName.SetTextColor(textColor);
             CardHolderName.SetTextColor(textColor);
