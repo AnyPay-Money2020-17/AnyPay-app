@@ -13,7 +13,7 @@ namespace AnyPay
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            SetContentView(Resource.Layout.Main);
+            SetContentView(Resource.Layout.PaymentMethodList);
 
             ListView PMListView = FindViewById<ListView>(Resource.Id.PMList);
             PMListAdapter = new PaymentMethodListAdapter(this, new PaymentMethodList());
@@ -32,11 +32,13 @@ namespace AnyPay
     {
         private PaymentMethodList methods;
         private Activity context;
+        private BitmapCache bitmapCache;
 
         public PaymentMethodListAdapter(Activity context, PaymentMethodList documents) : base()
         {
             this.context = context;
             this.methods = documents;
+            bitmapCache = new BitmapCache(this.context, 540);
         }
 
         public override long GetItemId(int position)
@@ -56,14 +58,11 @@ namespace AnyPay
 
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
-            View view = convertView;
+            PaymentMethodRow view = (PaymentMethodRow) convertView;
             if (view == null)
-                view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleListItem1, null);
+                view = new PaymentMethodRow(context, bitmapCache);
 
-            TextView textView = view.FindViewById<TextView>(Android.Resource.Id.Text1);
-
-            textView.Text = methods.PaymentMethods[position].ShortName;
-
+            view.UpdateViewData(methods.PaymentMethods[position]);
             return view;
         }
     }

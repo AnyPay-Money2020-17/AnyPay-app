@@ -63,12 +63,14 @@
     <Compile Include="AccountView.cs" />
     <Compile Include="AddPaymentMethod.cs" />
     <Compile Include="AnyPayDevice.cs" />
+    <Compile Include="BitmapCache.cs" />
     <Compile Include="CreateAccount.cs" />
     <Compile Include="LoginAccount.cs" />
     <Compile Include="Pay.cs" />
     <Compile Include="PaymentMethodList.cs" />
     <Compile Include="PaymentMethodListView.cs" />
     <Compile Include="PaymentMethod.cs" />
+    <Compile Include="PaymentMethodRow.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -90,7 +92,7 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Main.axml">
+    <AndroidResource Include="Resources\layout\PaymentMethodList.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -99,6 +101,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
+    <AndroidResource Include="Resources\layout\PaymentMethodRow.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\style.xml">
@@ -110,6 +115,20 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\anypay_icon_a_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\acf_nc_blue_xxhdpi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\acf_nc_green_xxhdpi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\acf_nc_red_xxhdpi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\CardClip.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

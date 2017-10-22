@@ -10,5 +10,14 @@
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/PMList" />
+        android:id="@+id/PMList"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:paddingBottom="0dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:paddingTop="0dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:elevation="0dp" />
 </LinearLayout>

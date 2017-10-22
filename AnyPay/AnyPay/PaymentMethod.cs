@@ -8,10 +8,12 @@ namespace AnyPay
         */
 
         public string ShortName { get; private set; }
+        public string PaymentMethodType { get; private set; }
 
-        public PaymentMethod(string sn)
+        public PaymentMethod(string sn, string pmt)
         {
             ShortName = sn;
+            PaymentMethodType = pmt;
         }
     }
 }
