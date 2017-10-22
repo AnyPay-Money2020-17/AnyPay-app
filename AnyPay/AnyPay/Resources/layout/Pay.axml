@@ -1,19 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res/org.AnyPay.app"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/org.AnyPay.app"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="0dp"
     android:clipChildren="false"
     android:clipToPadding="false">
-    <org.AnyPay.app.AnyPay.AnyPay.MenuBar 
+    <org.AnyPay.app.AnyPay.AnyPay.MenuBar
         android:id="@+id/MenuBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         custom:showBack="true"
         custom:showMenu="false" />
+    <TextView
+        android:text="Pay Now"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="4dp"
+        android:textSize="40dp"
+        android:typeface="normal"
+        android:textStyle="bold"
+        android:gravity="center" />
     <org.AnyPay.app.AnyPay.AnyPay.PaymentMethodRow
         android:id="@+id/CurrentCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    <TextView
+        android:text="Touch the AnyPay dongle to the card reader."
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:paddingTop="5dp" />
 </LinearLayout>

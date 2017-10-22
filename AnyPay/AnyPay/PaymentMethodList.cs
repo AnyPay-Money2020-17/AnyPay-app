@@ -15,7 +15,7 @@ namespace AnyPay
         {
             PaymentMethods.Add(new PaymentMethod("", "visa", "XXXX-XXXX-XXXX-9990", "Samp L. Text", "8acb83b6-8c30-4f26-9a08-cc11980a9b7c"));
             PaymentMethods.Add(new PaymentMethod("", "mastercard", "XXXX-XXXX-XXXX-1234", "First N. Last", "1"));
-            PaymentMethods.Add(new PaymentMethod("My Account", "paypal", "pixelfelon@gmail.com", "James Rowley", "2"));
+            PaymentMethods.Add(new PaymentMethod("My Paypal", "paypal", "pixelfelon@gmail.com", "James Rowley", "2"));
         }
 
         public PaymentMethod GetPaymentMethodByUID(string UID)
