@@ -6,5 +6,12 @@ namespace AnyPay
          * Implement class containing all critical information for executing a payment.
          * Implement method to request encrypted card data from server for executing payment.
         */
+
+        public string ShortName { get; private set; }
+
+        public PaymentMethod(string sn)
+        {
+            ShortName = sn;
+        }
     }
 }

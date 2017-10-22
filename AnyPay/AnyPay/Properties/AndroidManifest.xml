@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="AnyPay.AnyPay" android:versionCode="1" android:versionName="1.0">
-  <uses-sdk android:minSdkVersion="16" />
-  <application android:label="AnyPay"></application>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.AnyPay.app" android:versionCode="23" android:versionName="6.0">
+	<uses-sdk android:minSdkVersion="23" />
+	<application android:label="AnyPay" android:icon="@drawable/anypay_icon_a_256" android:theme="@style/AnyPay.Main"></application>
 </manifest>
